@@ -32,8 +32,8 @@
       }
 
       h2 {
-        margin-bottom: 24px;
         margin-top: 40px;
+        margin-bottom: 0;
       }
 
       td {
@@ -50,13 +50,14 @@
         border-radius: 4px;
         box-shadow: 0px 2px 3px -1px #00000011;
         box-sizing: border-box;
+        font-size: 15px;
       }
 
       .flex-col {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 12px;
+        gap: 16px;
       }
 
       p {
@@ -115,36 +116,49 @@
         IB Computer Science Solution <br />
         Cover Sheet Generator
       </h2>
-      <p style="padding-top: 0px; padding-bottom: 20px">
+      <p style="color: gray; font-size: 14px">
+        by
+        <a style="color: #3478f6" href="https://github.com/baris-inandi"
+          >baris-inandi</a
+        >
+      </p>
+      <p style="padding-top: 32px; padding-bottom: 20px">
         Please structure your solution and name your files as seen in the
         screenshot below. cover_page.htm will be generated for you.
       </p>
       <img src="/screenshot.jpeg" alt="Screenshot" width="100%" />
+      <span style="color: gray; font-size: 14px">
+        * Where ROT.pdf is your Record of Tasks document.
+      </span>
       <div x-data="{ title: '', pcode: '', wc: '', desc: '' }">
         <div class="flex-col" style="padding-top: 24px">
           <div>
             <p>Solution title</p>
-            <input type="text" x-model="title" />
+            <input type="text" x-model="title" placeholder="MyAwesomeProject" />
           </div>
           <div>
             <p>Candidate Personal Code</p>
-            <input type="text" x-model="pcode" />
+            <input type="text" x-model="pcode" placeholder="00000" />
           </div>
           <div>
             <p>Word count</p>
-            <input type="text" x-model="wc" />
+            <input type="text" x-model="wc" placeholder="1984" />
+            <span style="color: gray; font-size: 14px">
+              Make sure you enter an integer.
+            </span>
           </div>
           <div>
             <p>
               <b>Additional instructions:</b>
-              Describe any steps necissary to execute the product
+              Describe any necessary steps to get your product up and running.
             </p>
             <textarea
-              placeholder=""
+              style="resize: vertical"
               type="text"
-              rows="5"
+              rows="6"
               x-model="desc"
               class="font"
+              placeholder="e.g. Unzip the source code and navigate to the root directory. Install all dependencies with 'npm install'. Run the server with 'npm start' and open 'localhost:3000' in your browser."
             ></textarea>
           </div>
         </div>
@@ -156,12 +170,6 @@
           >
             Generate Cover Page
           </button>
-          <p style="color: gray; padding-top: 20px; font-size: 14px">
-            Created by
-            <a style="color: #3478f6" href="https://github.com/baris-inandi"
-              >baris-inandi</a
-            >
-          </p>
         </div>
       </div>
     </main>
