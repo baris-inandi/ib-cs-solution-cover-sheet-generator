@@ -113,15 +113,15 @@
               "beforeSend" === e
                 ? (t = n)
                 : "event" === e
-                ? n && d(n.name, n.data)
-                : "pageview" === e &&
-                  n &&
-                  (n.route && (r = n.route),
-                  n.path && (o = n.path),
-                  u({
-                    withReferrer: l,
-                  }),
-                  (l = !1)),
+                  ? n && d(n.name, n.data)
+                  : "pageview" === e &&
+                    n &&
+                    (n.route && (r = n.route),
+                    n.path && (o = n.path),
+                    u({
+                      withReferrer: l,
+                    }),
+                    (l = !1)),
                 "enableCookie" === e && c();
             }),
               null == (e = window.vaq) ||
@@ -153,7 +153,7 @@
         (n = {
           exports: {},
         }).exports,
-        n
+        n,
       ),
     n.exports
   ))();
