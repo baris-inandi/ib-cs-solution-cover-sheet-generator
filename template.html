@@ -1,122 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computer Science Solution Cover Page</title>
     <style>
-        body {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 80px;
-            padding-top: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-                "Helvetica Neue", sans-serif;
-            font-weight: 400;
-            margin: auto;
-            max-width: 720px;
-        }
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+        padding-top: 20px;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        font-weight: 400;
+        margin: auto;
+        max-width: 720px;
+      }
 
-        h3 {
-            margin-bottom: 6px;
-            margin-top: 32px;
-        }
+      h3 {
+        margin-bottom: 6px;
+        margin-top: 32px;
+      }
 
-        td {
-            padding-right: 32px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-        }
+      td {
+        padding-right: 32px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Computer Science Solution Cover Page</h2>
     <p><b>Solution Title:</b> {{title}}</p>
     <p><b>Candidate Personal Code:</b> {{pcode}}</p>
 
     <table aria-describedby="CS Solution Cover Page">
-        <th></th>
-        <tr>
-            <td>
-                <h3>The Product</h3>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Link to Source Code
-            </td>
-            <td>
-                <a target="_blank" href="source.zip">Product Source Code</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <p>
-                    <b>Instructions to access product:</b>
-                    <span>
-                        {{desc}}
-                    </span>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Links to Documentation</h3>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Criterion A
-            </td>
-            <td>
-                <a target="_blank" href="documentation/A.pdf">Planning</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Criterion B
-            </td>
-            <td>
-                <a target="_blank" href="documentation/B.pdf">Design</a>,
-                <a target="_blank" href="documentation/ROT.pdf">
-                    Record of tasks</a </td>
-        </tr>
-        <tr>
-            <td>
-                Criterion C
-            </td>
-            <td>
-                <a target="_blank" href="documentation/C.pdf">Development</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Criterion D
-            </td>
-            <td>
-                <a target="_blank" href="documentation/D.mp4">Video of product</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Criterion E
-            </td>
-            <td>
-                <a target="_blank" href="documentation/E.pdf">Evaluation</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p><b>Total Word Count</b></p>
-            </td>
-            <td>
-                <p>{{wc}} words</p>
-            </td>
-        </tr>
+      <th></th>
+      <tr>
+        <td>
+          <h3>The Product</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>Link to Source Code</td>
+        <td>
+          <a target="_blank" href="source.zip">Product Source Code</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>
+            <b>Instructions to access product:</b>
+            <span> {{desc}} </span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Links to Documentation</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>Criterion A</td>
+        <td>
+          <a target="_blank" href="documentation/A.pdf">Planning</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Criterion B</td>
+        <td>
+          <a target="_blank" href="documentation/B.pdf">Design</a>,
+          <a target="_blank" href="documentation/ROT.pdf"> Record of tasks</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Criterion C</td>
+        <td>
+          <a target="_blank" href="documentation/C.pdf">Development</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Criterion D</td>
+        <td>
+          <a target="_blank" href="documentation/D.mp4">Video of product</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Criterion E</td>
+        <td>
+          <a target="_blank" href="documentation/E.pdf">Evaluation</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><b>Total Word Count</b></p>
+        </td>
+        <td>
+          <p>{{wc}} words</p>
+        </td>
+      </tr>
     </table>
-</body>
-
+  </body>
 </html>
