@@ -1,0 +1,21 @@
+{
+  "name": "coversheet",
+  "version": "1.0.0",
+  "description": "Generate IB CS solution cover pages easily",
+  "scripts": {
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baris-inandi/ib-cs-solution-cover-sheet-generator.git"
+  },
+  "author": "baris-inandi",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/baris-inandi/ib-cs-solution-cover-sheet-generator/issues"
+  },
+  "homepage": "https://github.com/baris-inandi/ib-cs-solution-cover-sheet-generator#readme",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
