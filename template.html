@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computer Science Solution Cover Page</title>
+    <title>Solution Cover Page: {{title}}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,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"
+    />
     <style>
       body {
         padding-left: 20px;
@@ -16,37 +21,49 @@
           BlinkMacSystemFont,
           "Segoe UI",
           Roboto,
-          Oxygen,
-          Ubuntu,
-          Cantarell,
           "Open Sans",
           "Helvetica Neue",
+          "Arial",
           sans-serif;
         font-weight: 400;
         margin: auto;
-        max-width: 720px;
+        width: fit-content;
+        max-width: 650px;
+      }
+
+      .right {
+        text-align: right;
+        padding-left: 100px;
       }
 
       h3 {
         margin-bottom: 6px;
-        margin-top: 32px;
+        margin-top: 48px;
       }
 
       td {
-        padding-right: 32px;
         padding-top: 3px;
         padding-bottom: 3px;
+      }
+
+      h2 {
+        padding-bottom: 24px;
       }
     </style>
   </head>
 
   <body>
-    <h2>Computer Science Solution Cover Page</h2>
-    <p><b>Solution Title:</b> {{title}}</p>
-    <p><b>Candidate Personal Code:</b> {{pcode}}</p>
-
+    <h2>IBDP Computer Science<br />Solution Cover Page</h2>
     <table aria-describedby="CS Solution Cover Page">
       <th></th>
+      <tr>
+        <td><b>Solution Title</b></td>
+        <td class="right">{{title}}</td>
+      </tr>
+      <tr>
+        <td><b>Candidate Personal Code</b></td>
+        <td class="right">{{pcode}}</td>
+      </tr>
       <tr>
         <td>
           <h3>The Product</h3>
@@ -54,16 +71,13 @@
       </tr>
       <tr>
         <td>Link to Source Code</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="source.zip">Product Source Code</a>
         </td>
       </tr>
       <tr>
         <td colspan="2">
-          <p>
-            <b>Instructions to access product:</b>
-            <span> {{desc}} </span>
-          </p>
+          <p style="margin-bottom: 0 !important">{{desc}}</p>
         </td>
       </tr>
       <tr>
@@ -73,32 +87,32 @@
       </tr>
       <tr>
         <td>Criterion A</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="documentation/A.pdf">Planning</a>
         </td>
       </tr>
       <tr>
         <td>Criterion B</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="documentation/B.pdf">Design</a>,
           <a target="_blank" href="documentation/ROT.pdf"> Record of tasks</a>
         </td>
       </tr>
       <tr>
         <td>Criterion C</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="documentation/C.pdf">Development</a>
         </td>
       </tr>
       <tr>
         <td>Criterion D</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="documentation/D.mp4">Video of product</a>
         </td>
       </tr>
       <tr>
         <td>Criterion E</td>
-        <td>
+        <td class="right">
           <a target="_blank" href="documentation/E.pdf">Evaluation</a>
         </td>
       </tr>
@@ -106,7 +120,7 @@
         <td>
           <p><b>Total Word Count</b></p>
         </td>
-        <td>
+        <td class="right">
           <p>{{wc}} words</p>
         </td>
       </tr>
