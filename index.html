@@ -128,7 +128,6 @@
         }
         const outputString = template
           .replaceAll("{{title}}", conf.title.trim())
-          .replaceAll("{{pcode}}", conf.pcode.trim())
           .replaceAll("{{wc}}", conf.wc.trim())
           .replaceAll("{{desc}}", desc.trim());
         download("cover_page.htm", outputString);
@@ -158,8 +157,8 @@
       </span>
       <form
         id="mainform"
-        x-on:submit="generate({ title, pcode, wc, desc })"
-        x-data="{ title: '', pcode: '', wc: '', desc: '' }"
+        x-on:submit="generate({ title, wc, desc })"
+        x-data="{ title: '', wc: '', desc: '' }"
       >
         <div class="flex-col" style="padding-top: 24px">
           <div>
@@ -168,15 +167,6 @@
               type="text"
               x-model="title"
               placeholder="MyAwesomeProject"
-              required="required"
-            />
-          </div>
-          <div>
-            <p>Candidate Personal Code *</p>
-            <input
-              type="text"
-              x-model="pcode"
-              placeholder="00000"
               required="required"
             />
           </div>
