@@ -61,7 +61,7 @@
         padding-bottom: 3px;
       }
 
-      input,
+      .input,
       textarea {
         width: 100%;
         padding: 12px;
@@ -129,7 +129,19 @@
         const outputString = template
           .replaceAll("{{title}}", conf.title.trim())
           .replaceAll("{{wc}}", conf.wc.trim())
-          .replaceAll("{{desc}}", desc.trim());
+          .replaceAll("{{desc}}", desc.trim())
+          .replaceAll(
+            "{{apdx}}",
+            conf.apdx
+              ? `
+<tr>
+  <td>Appendices</td>
+  <td class="right">
+    <a target="_blank" href="documentation/Appendices.pdf">Appendices</a>
+  </td>
+</tr>`
+              : "",
+          );
         download("cover_page.htm", outputString);
       }
     </script>
@@ -157,13 +169,14 @@
       </span>
       <form
         id="mainform"
-        x-on:submit="generate({ title, wc, desc })"
-        x-data="{ title: '', wc: '', desc: '' }"
+        x-on:submit="generate({ title, wc, desc, apdx })"
+        x-data="{ title: '', wc: '', desc: '', apdx: false }"
       >
         <div class="flex-col" style="padding-top: 24px">
           <div>
             <p>Solution title *</p>
             <input
+              class="input"
               type="text"
               x-model="title"
               placeholder="MyAwesomeProject"
@@ -173,6 +186,7 @@
           <div>
             <p>Word count *</p>
             <input
+              class="input"
               type="number"
               x-model="wc"
               placeholder="1984"
@@ -194,6 +208,36 @@
               x-model="desc"
               placeholder="e.g. Unzip the source code and navigate to the root directory. Install all dependencies with 'npm install'. Run the server with 'npm start' and open 'localhost:3000' in your browser."
             ></textarea>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            user-select: none;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            gap: 10px;
+            align-items: top;
+          "
+        >
+          <input
+            type="checkbox"
+            id="apdx"
+            style="
+              accent-color: #3478f6;
+              height: 24px;
+              width: 24px;
+              padding: 0;
+              margin: 0;
+            "
+            x-model="apdx"
+          />
+          <div style="display: flex; flex-direction: column">
+            <label for="apdx">Use separate appendix file</label>
+            <label for="apdx" style="color: gray; font-size: 0.85em">
+              Check this box if you have a separate appendix file. Name the file
+              'Appendices.pdf' and place it under the 'documentation' directory.
+            </label>
           </div>
         </div>
         <div style="padding-top: 20px">
